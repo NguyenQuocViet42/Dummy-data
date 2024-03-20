@@ -33,7 +33,9 @@ def generate_data():
     # Vòng lặp qua từng ngày trong khoảng thời gian đã cho
     current_date = start_date
     while current_date <= end_date:
-        
+        if current_date.weekday() >= 5:
+            current_date += timedelta(days=1)
+            continue
         # Tạo bản ghi đi sớm
         for id in soon_employee_ids:
             department_id = config['department_ids']
@@ -105,9 +107,6 @@ def generate_data():
                 "status":"Không đi"
             }
             records.append(record)
-            
-            
-            
         # Chuyển sang ngày tiếp theo
         current_date += timedelta(days=1)
 
@@ -129,3 +128,6 @@ def generate_data():
         # Ghi từng bản ghi vào tệp
         for record in records:
             writer.writerow(record)
+            
+if __name__ == '__main__':
+    generate_data()
