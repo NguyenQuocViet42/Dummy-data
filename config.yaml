@@ -1,0 +1,21 @@
+# Thông tin đăng nhập
+host: '10.10.2.17'
+user: 'admin'
+password: 'Gsan@2023'
+
+camera_id: '5560'
+location_id: '828'
+department_ids: '1218'
+
+shift_id: '3782'
+shift_time_id: '2145'
+
+start_date: '16/3/2024'
+end_date : '16/3/2024'
+
+# Thời gian của ca làm việc
+start_time: '08:30:00'
+end_time: '18:00:00'
+
+number_soon_employee: '200'          # Số nhân viên đi sớm
+number_late_employee: '300'          # Số nhân viên đi muộn

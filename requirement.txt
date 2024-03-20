@@ -1,0 +1,5 @@
+pandas
+mysql
+tqdm
+pyyaml
+mysql-connector-python
