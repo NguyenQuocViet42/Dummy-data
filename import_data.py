@@ -53,7 +53,7 @@ if __name__ == '_main_':
             .format(config['camera_id'],    row['employee'],    config['location_id'],   config['shift_id'],    row['status'],      row['first_in'],    row['check_in_date'],   config['shift_time_id'],    row['department'],      row['last_out'],    row['first_in'],    row['last_out'])
             execute_insert(insert_query)
         
-        if row['report_type'] != "0":
+        if row['report_type'] != "0" and config['run_notifications'] != '0':
             insert_query = "INSERT INTO history_db.notification_histories \
                         (    camera_id,   employee_id,      location_id      ,     shift_id,            report_type,         notify_date,	        shift_time_id,            department_id,         created_at,       updated_at        ,time             ,type          ) \
                 values	(   \'{}\'      ,	 \'{}\'    ,	    \'{}\'             ,     \'{}\',	            \'{}\'	,              \'{}\'	    ,	        \'{}\'	       ,            \'{}\'     ,            \'{}\',             \'{}\'              ,\'{}\'             ,\'{}\'          );"\

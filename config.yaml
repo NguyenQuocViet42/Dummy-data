@@ -19,3 +19,5 @@ end_time: '18:00:00'
 
 number_soon_employee: '200'          # Số nhân viên đi sớm
 number_late_employee: '300'          # Số nhân viên đi muộn
+
+run_notifications: '0'
