@@ -37,7 +37,7 @@ def execute_insert(insert_query):
     except Exception as e:
         print(e)
 
-if __name__ == '_main_':
+if __name__ == '__main__':
     # Get Employee's ID's
     get_employee()
     # Generate Data:
